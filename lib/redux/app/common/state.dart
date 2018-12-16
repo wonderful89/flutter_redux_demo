@@ -9,4 +9,12 @@ class CommonState {
       request2List: const [],
     );
   }
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is CommonState && runtimeType == other.runtimeType && request1List == other.request1List && request2List == other.request2List;
+
+  @override
+  int get hashCode => request1List.hashCode ^ request2List.hashCode;
 }

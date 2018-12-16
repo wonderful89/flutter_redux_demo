@@ -11,4 +11,11 @@ class AppState {
 //      this.commonState = CommonState.initial(),
         );
   }
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) || other is AppState && runtimeType == other.runtimeType && loginState == other.loginState && commonState == other.commonState;
+
+  @override
+  int get hashCode => loginState.hashCode ^ commonState.hashCode;
 }
