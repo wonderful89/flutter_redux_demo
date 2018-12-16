@@ -1,7 +1,12 @@
-class LoginState {
-  String userName;
-  String token;
-  LoginState({this.token, this.userName});
+class CommonState {
+  List<int> request1List;
+  List<int> request2List;
+  CommonState({this.request1List, this.request2List});
 
-  LoginState.initial({this.userName = '', this.token = ''});
+  factory CommonState.initial() {
+    return new CommonState(
+      request1List: const [],
+      request2List: const [],
+    );
+  }
 }

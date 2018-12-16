@@ -1,0 +1,3 @@
+class EnterForegroundAction {}
+
+class ExitForegroundAction {}

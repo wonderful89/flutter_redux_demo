@@ -1,3 +1,3 @@
-class LoginAction {}
+class FetchRequest1Action {}
 
-class LogoutAction {}
+class FetchRequest2Action {}
