@@ -13,8 +13,8 @@ List<Middleware<AppState>> createAppMiddleware() {
   list.addAll(<Middleware<AppState>>[
     TEAppMiddleware(),
   ]);
-  list.add(new LoggingMiddleware());
-  list.add(new LoggingMiddleware2());
+//  list.add(new LoggingMiddleware());
+//  list.add(new LoggingMiddleware2());
 
   return list;
 }

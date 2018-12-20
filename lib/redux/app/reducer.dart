@@ -7,6 +7,11 @@ AppState appReducer(AppState state, dynamic action) {
   if (action is EnterForegroundAction) {
     print('app reducer: EnterForegroundAction');
   }
+
+  if (action is InitAppStateAction) {
+    return AppState.initial();
+  }
+
   return new AppState(
     loginState: loginReducer(state.loginState, action),
     commonState: commonReducer(state.commonState, action),

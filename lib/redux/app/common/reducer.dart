@@ -15,9 +15,13 @@ final commonReducer = combineReducers<CommonState>([
 ]);
 
 CommonState _fetch1(CommonState state, FetchRequest1Action action) {
-  return state;
+  print('_fetch1 ---------');
+//  return state.copy2(request1ListInput: [1, 2, 3], testStrInput: '234'); // 不会通知
+  return state.copy(
+    request1List: [1, 2, 3],
+  );
 }
 
 CommonState _fetch2(CommonState state, FetchRequest2Action action) {
-  return state;
+  return state.copy(request2List: [1, 2, 3]);
 }

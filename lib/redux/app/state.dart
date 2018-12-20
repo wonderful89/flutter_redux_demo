@@ -8,14 +8,15 @@ class AppState {
 
   factory AppState.initial() {
     return new AppState(
-//      this.commonState = CommonState.initial(),
-        );
+      loginState: LoginState.initial(),
+      commonState: CommonState.initial(),
+    );
   }
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) || other is AppState && runtimeType == other.runtimeType && loginState == other.loginState && commonState == other.commonState;
-
-  @override
-  int get hashCode => loginState.hashCode ^ commonState.hashCode;
+//  @override
+//  bool operator ==(Object other) =>
+//      identical(this, other) || other is AppState && runtimeType == other.runtimeType && loginState == other.loginState && commonState == other.commonState;
+//
+//  @override
+//  int get hashCode => loginState.hashCode ^ commonState.hashCode;
 }
